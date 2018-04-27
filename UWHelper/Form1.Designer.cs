@@ -43,6 +43,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.chkBorderless = new System.Windows.Forms.CheckBox();
             this.tmrSetTopMost = new System.Windows.Forms.Timer(this.components);
+            this.tmrAutomatic = new System.Windows.Forms.Timer(this.components);
+            this.chkAuto = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // lstProcesses
@@ -149,7 +151,7 @@
             // chkBorderless
             // 
             this.chkBorderless.AutoSize = true;
-            this.chkBorderless.Location = new System.Drawing.Point(266, 371);
+            this.chkBorderless.Location = new System.Drawing.Point(232, 372);
             this.chkBorderless.Name = "chkBorderless";
             this.chkBorderless.Size = new System.Drawing.Size(75, 17);
             this.chkBorderless.TabIndex = 6;
@@ -160,11 +162,26 @@
             // 
             this.tmrSetTopMost.Tick += new System.EventHandler(this.tmrSetTopMost_Tick);
             // 
+            // tmrAutomatic
+            // 
+            this.tmrAutomatic.Tick += new System.EventHandler(this.tmrAutomatic_Tick);
+            // 
+            // chkAuto
+            // 
+            this.chkAuto.AutoSize = true;
+            this.chkAuto.Location = new System.Drawing.Point(12, 372);
+            this.chkAuto.Name = "chkAuto";
+            this.chkAuto.Size = new System.Drawing.Size(117, 17);
+            this.chkAuto.TabIndex = 11;
+            this.chkAuto.Text = "Apply Automatically";
+            this.chkAuto.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(441, 401);
+            this.Controls.Add(this.chkAuto);
             this.Controls.Add(this.chkBorderless);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -203,6 +220,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.CheckBox chkBorderless;
         private System.Windows.Forms.Timer tmrSetTopMost;
+        private System.Windows.Forms.Timer tmrAutomatic;
+        private System.Windows.Forms.CheckBox chkAuto;
     }
 }
 
